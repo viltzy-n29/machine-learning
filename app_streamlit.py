@@ -1,6 +1,6 @@
 import streamlit as st
 import pandas as pd
-import joblib
+import joblib as jb
 
 st.set_page_config(
     page_title="klasifikasi kualitas kopi",
@@ -8,7 +8,7 @@ st.set_page_config(
 )
 
 
-model = joblib.load("model_klasifikasi_kopi.joblib")
+model = jb.load("model_klasifikasi_kopi.joblib")
 
 st.title("☕ Klasifikasi Kualitas Kopi Berdasarkan Fitur")
 
@@ -24,4 +24,5 @@ if st.button("Prediksi", type="primary"):
     st.balloons()
 
 st.divider()
+
 st.caption("dibuat dengan  *☕* oleh **ahnaf**")
